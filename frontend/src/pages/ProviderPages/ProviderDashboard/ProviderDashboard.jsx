@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProviderDashboard = () => {
   return (
-    <div>ProviderDashboard</div>
+    <div className='bg-red-400'>satya</div>
   )
 }
 

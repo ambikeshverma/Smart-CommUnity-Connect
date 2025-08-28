@@ -6,7 +6,7 @@ const HomePage = () => {
     console.log(userType)
   return (
     <>
-    {userType==="seeker"? (<div>HomePage Seeker</div>) : (<div>HomePage Provider</div>)}
+    {userType==="seeker"? (<div>HomePage Seeker</div>) : (<div className='bg-emerald-500'>HomePage Provider_satya</div>)}
     </>
   )
 }
