@@ -80,7 +80,7 @@ router.patch("/:id", async (req, res) => {
     }
 
   
-    if (request.receiver.toString() !== req.user.`id.toString()) {
+    if (request.receiver.toString() !== req.user.id.toString()) {
       return res.status(403).json({ message: "Not authorized to update this request" });
     }
 
