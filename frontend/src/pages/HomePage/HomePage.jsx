@@ -39,7 +39,6 @@ const HomePage = () => {
   return (
     <>
     <Nav></Nav>
-    {userType==="seeker"? (<div>HomePage Seeker</div>) : (<div>HomePage Provider</div>)}
     </>
   )
 }
