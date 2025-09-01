@@ -10,12 +10,7 @@ import Nav from './components/NavBar/Nav'
 const App = () => {
   return (
     <>
-    <Nav></Nav>
-    <HomePage></HomePage>
-    <Post></Post>
-    <Mypost></Mypost>
-
-    </>
+   </>
   )
 }
 

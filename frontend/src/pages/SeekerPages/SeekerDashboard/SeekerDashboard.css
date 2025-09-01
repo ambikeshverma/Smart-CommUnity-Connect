@@ -51,14 +51,14 @@ padding:0  1rem 0 1rem;
 .search-bar{
     width:70vw;
     height:50px;
-    border: 1px solid rgb(246, 234, 214);
+    border: 1px solid rgb(180, 180, 180);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     border-radius: 8px;
-    padding: 0 .3rem 0 .3rem;
-
+    box-shadow: 0px 0px 4px rgba(39, 39, 39, 0.475);
+    padding: 0px 5px ;
 }
 
 .search-bar img{
@@ -74,6 +74,8 @@ padding:0  1rem 0 1rem;
 }
 .search-input{
     display: flex;
+    height: 80%;
+    padding: 10px;
     align-items: center;
     width: 70%;
     gap: 10px;
@@ -81,13 +83,13 @@ padding:0  1rem 0 1rem;
 }
 .search-input:hover {
     padding: 10px;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 119, 255, 0.732);
 }
 .search-bar button{
 
     padding:8px 25px;
-    border-radius: 12px;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
     background-color:rgba(0, 119, 255, 0.732) ;
