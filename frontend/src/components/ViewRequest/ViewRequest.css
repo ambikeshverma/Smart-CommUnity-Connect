@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.modelOverlayRequest {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.497);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modelOverlayRequest.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sideBar {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 65px;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  background-color: white;
+  position: relative;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  z-index: 1001;
+}
+
+.sideBar.open {
+  transform: translateX(0);
+}
+
+.button2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.bars {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bars .bar1,
+.bars .bar2 {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: gray;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+.bars .bar1 {
+  transform: rotate(45deg);
+}
+.bars .bar2 {
+  transform: rotate(-45deg);
+}

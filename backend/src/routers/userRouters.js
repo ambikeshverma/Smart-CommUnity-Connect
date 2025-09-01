@@ -13,7 +13,7 @@ const router = express.Router();
 
 router.post('/register',async (req, res) => {
   try {
-    const { name, email, password,currentRole } = req.body;
+    const { name, email, password,} = req.body;
 
     // Check if user already exists
     const existingUser = await createdUser.findOne({ email });
@@ -28,7 +28,7 @@ router.post('/register',async (req, res) => {
         name,   
         email,
         password:hashedPassword,
-        currentRole: currentRole ?? undefined,
+        currentRole: undefined,
         roles: "seeker"
     });
     
@@ -38,7 +38,7 @@ router.post('/register',async (req, res) => {
       email: user.email,
     });
   } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+    res.status(500).json({message: err.message || "Server error" });
   }
 
 })
@@ -71,9 +71,13 @@ router.post('/login',async (req, res) => {
       },
     });
   } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+    res.status(500).json({ error: err.message || "Server error"});
   }
 })
+
+router.get("/verify",authMiddleware, (req, res) => {
+  res.json({ message: "Token is valid", user: req.user });
+});
 
 router.patch("/roleUpdate",authMiddleware, async (req, res) => {
   try {

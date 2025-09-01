@@ -7,13 +7,14 @@ router.get('/',(req,res)=>{
     res.json({message:"Gig Router is working"})
 })
 router.post('/createGig',async (req,res)=>{
-    const{title,description} = req.body;
+    const{title,catagory,description} = req.body;
     const userId = req.user.id;
      const sender = await createdUser.findById(userId);
         if (!sender) return res.status(404).json({ message: "User not found" });
     try{
     const newGig = await createdGig.create({
-        title,   
+        title,
+        catagory,   
         description,
         postedBy:sender._id,
         roleAtPosting :sender.currentRole  

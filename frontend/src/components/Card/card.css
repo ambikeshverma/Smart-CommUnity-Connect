@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+.card{
+    width: 300px;
+    border: 2px solid rgb(246, 123, 193);
+    border-radius: 8px;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+    padding: 12px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.card .cover{
+    width: 100%;
+    height:150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.desc{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.titleRating{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleRating h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(111, 2, 154);
+}
+
+.titleRating span{
+    display: flex;
+    align-items: center;
+    padding: 1px 5px;
+    gap: 3px;
+    border: 2px solid rgb(170, 3, 236);
+    border-radius: 7px;
+    background-color: rgba(20, 238, 20, 0.251);
+}
+.titleRating span p{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(200, 200, 200);
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bt1{
+    width: 48%;
+    padding: 6px 0;
+    border: 2px solid rgb(170, 3, 236);
+    border-radius: 8px;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.bt2{
+    width: 48%;
+    padding: 6px 0;
+    border: 2px solid rgb(170, 3, 236);
+    border-radius: 8px;
+    background-color: rgb(170, 3, 236);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+    transition: background-color 0.2s, transform 0.2s;
+}

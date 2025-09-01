@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 64px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.271);
+  position: relative;
+  z-index: 1001;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 8px;
+}
+
+.title p {
+  font-size: 14px;
+  color: rgb(50, 50, 50);
+  font-weight: 500;
+  margin-top: -4px;
+}
+.titleHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(74, 2, 126);
+}
+
+.buttonsBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bell{
+  cursor: pointer;
+}
+
+.postBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid rgb(170, 3, 236);
+  border-radius: 8px;
+  padding: 4px 12px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.toggleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(170, 3, 236);
+  border-radius: 8px;
+  padding: 4px 12px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.seekerBox,
+.helperBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.postRequestBtn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background-color: rgb(6, 191, 0);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.logout{
+  background-color: rgb(255, 87, 3);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: black;
+  border-radius: 3px;
+}
+
+/* Sidebar (mobile menu) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .title,
+  .buttonsBox {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .seekerBox,.helperBox{
+    display: none;
+  }
+  .postBox{
+    align-items: center;
+    justify-content: center;
+  }
+  .postRequestBtn{
+    align-items: center;
+    justify-content: center;
+  }
+}
