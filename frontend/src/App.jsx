@@ -1,16 +1,20 @@
 import React from 'react'
-import PeoplePage from './pages/profile'
-import Nav from './components/navBar/Nav'
+
 import HomePage from './pages/HomePage/HomePage'
+import Post from './components/post/Post'
+import Mypost from './components/Mypost/Mypost'
+import Nav from './components/NavBar/Nav'
 
 
 
 const App = () => {
   return (
     <>
-    <Nav/>
+    <Nav></Nav>
     <HomePage></HomePage>
-    <PeoplePage />
+    <Post></Post>
+    <Mypost></Mypost>
+
     </>
   )
 }
