@@ -5,6 +5,8 @@ import Nav from '../../components/NavBar/Nav'
 import axios from 'axios' 
 
 
+import SeekerDashboard from '../SeekerPages/SeekerDashboard/SeekerDashboard'
+import ProviderDashboard from '../ProviderPages/ProviderDashboard/ProviderDashboard'
 
 const HomePage = () => {
     const {userType} = useContext(UserType)
@@ -39,6 +41,7 @@ const HomePage = () => {
   return (
     <>
     <Nav></Nav>
+    {userType==="seeker"? (<SeekerDashboard></SeekerDashboard>) : (<ProviderDashboard></ProviderDashboard>)}
     </>
   )
 }
