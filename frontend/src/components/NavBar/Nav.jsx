@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import UserTypeToggle from "../UserType/UserTypeToggle";
 import { useNavigate } from "react-router-dom"; 
 import "./nav.css";
-import ViewPost from "../ViewPost/viewPost";
+import ViewPost from "../ViewPost/ViewPost";
 import ViewRequest from "../ViewRequest/ViewRequest";
+import Form from "../Form/Form"
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModelOpenRequest,setIsModelOpenRequest] = useState(false)
+  const [isOpenPostForm, setIsOpenPostForm] = useState(false)
   const navigate = useNavigate();
 
    const handleLogout = () => {
@@ -53,7 +55,8 @@ const Nav = () => {
 
           <button className="postRequestBtn">
             <span>+</span>
-            <span className="pl-2">Post Request</span>
+            <span className="pl-2" onClick={()=>setIsOpenPostForm(true)}>Post Request</span>
+            <Form isOpenPostForm={isOpenPostForm} isClosePostForm={()=>setIsOpenPostForm(false)}></Form>
           </button>
           <button className="logout" onClick={handleLogout}>Logout</button>
         </div>
@@ -70,12 +73,14 @@ const Nav = () => {
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <button className="closeBtn" onClick={() => setIsOpen(false)}>✖</button>
 
-        <img src="/src/assets/Bell icon.png" width="25px" alt="bell" />
+        <img className="bell" src="/src/assets/Bell icon.png" onClick={()=>setIsModelOpenRequest(true)} width="25px" alt="bell" />
+          <ViewRequest  isOpenRequest={isModelOpenRequest} onCloseRequest={()=>setIsModelOpenRequest(false)}></ViewRequest>
 
-        <div className="postBox">
+        <button className="postBox" onClick={() => setIsModalOpen(true)}>
+              <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></ViewPost>
           <img src="/src/assets/document.png" width="20px" alt="post" />
           <h5>My Posts</h5>
-        </div>
+        </button>
 
         <div className="toggleBox">
           <div className="seekerBox">

@@ -5,27 +5,40 @@
     font-family: 'Poppins', sans-serif;
 }
 .container1{
+    position: fixed;
+    top: 0;
+    right: 0;
     width: 100%;
-    min-height: 100vh;
-    background-color: #00000030;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.129);
+    backdrop-filter:blur(2px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0px;
+    justify-content: center;
+    padding: 0px;
+    z-index: 1000;
+    overflow-y: scroll;
 }
 
 .container1 form{
     width: 90%;
     max-width: 400px;
-    background-color: white;
+    background-color: aliceblue;
     padding: 20px;  
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.477); 
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+     margin: 0 auto;
+    max-height: 85vh; 
+    overflow-y: auto; 
+     scrollbar-width: none;       
+    -ms-overflow-style: none;    
+}
+.container1 form::-webkit-scrollbar {
+    display: none;            
 }
 
 .container1 form h1{
@@ -48,6 +61,7 @@
 .inputBox label{
     font-size: 14px;
     font-weight: 500;
+    text-align: start;
     color: rgb(30, 30, 30);
 }
 .inputBox input, .inputBox textarea, .inputBox select{
@@ -57,6 +71,8 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    color: black;
+    background-color: white;
 }
 .inputBox input:focus, .inputBox textarea:focus, .inputBox select:focus{
     border-color: rgb(74, 2, 126);

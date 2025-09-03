@@ -11,27 +11,35 @@ router.get('/getAllSent',async (req,res)=>{
    const sender = await createdUser.findById(userId);
    if(!sender) return res.status(404).json({message:"User not found"})
    const role = sender.currentRole; // dynamic role of logged-in user
-    const sentRequests = await createdRequest.find({sender:userId,senderRole:role}).populate('gig').populate('receiver','name email');
+   const sentRequests = await createdRequest.find({sender:userId,senderRole:role}).populate('gig').populate('receiver','name email');
   res.status(200).json({sentRequests})
   }
-  catch(err){
-    res.status(500).json({error:err.message})
+  catch(error){
+    res.status(500).json({message:error.message})
   }
 })
 
-router.get('/getAllReceived',async (req,res)=>{
-  try{
-   const userId = req.user.id; // logged in user
-   const receiver = await createdUser.findById(userId);
-   if(!receiver) return res.status(404).json({message:"User not found"})
-   const role = receiver.currentRole; // dynamic role of logged-in user
-    const receivedRequests = await createdRequest.find({receiver:userId,receiverRole:role}).populate('gig').populate('sender','name email');
-  res.status(200).json({receivedRequests})
+// backend route for gig-wise requests
+router.get('/getAllReceived/:gigId', async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const receiver = await createdUser.findById(userId);
+    if (!receiver) return res.status(404).json({ message: "User not found" });
+
+    const role = receiver.currentRole;
+    const { gigId } = req.params;
+
+    const receivedRequests = await createdRequest
+      .find({ receiver: userId, receiverRole: role, gig: gigId })
+      .populate('gig')
+      .populate('sender', 'name email');
+
+    res.status(200).json({ receivedRequests });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
-  catch(err){
-    res.status(500).json({error:err.message})
-  }
-})
+});
+
 
 router.post("/sendRequest/:gigId", async (req, res) => {
   try {
@@ -63,7 +71,7 @@ router.post("/sendRequest/:gigId", async (req, res) => {
 })
 
 
-router.patch("/:id", async (req, res) => {
+router.patch("/updateStatus/:id", async (req, res) => {
   try {
     const { status } = req.body; 
     const { id } = req.params;

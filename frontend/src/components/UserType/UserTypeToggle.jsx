@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import {UserType} from "../Context/UserTypeContext";
 
 export default function UserTypeToggle() {
-  const {userType, setUserType} = useContext(UserType)
+  const {userType,  updateUserType } = useContext(UserType)
   const isSeeker = userType === "seeker";
 
   const toggleRole = () => {
-    setUserType(isSeeker ? "provider" : "seeker");
+     const newType = userType === "seeker" ? "provider" : "seeker";
+    updateUserType(newType);
   };
 
   return (

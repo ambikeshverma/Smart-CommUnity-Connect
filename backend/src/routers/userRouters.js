@@ -60,7 +60,7 @@ router.post('/login',async (req, res) => {
     }
 
     // Generate JWT
-    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "4h" });
 
     res.json({
       token,
@@ -78,6 +78,8 @@ router.post('/login',async (req, res) => {
 router.get("/verify",authMiddleware, (req, res) => {
   res.json({ message: "Token is valid", user: req.user });
 });
+
+//role Update
 
 router.patch("/roleUpdate",authMiddleware, async (req, res) => {
   try {

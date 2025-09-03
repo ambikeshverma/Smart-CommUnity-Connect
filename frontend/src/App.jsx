@@ -15,7 +15,7 @@ const App = () => {
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Registration/>} />
       <Route path='/' element={<ProtectedRoute><HomePage/></ProtectedRoute>} />
-      <Route path='/category' element={<Catagory/>} />
+      <Route path='/category-wise-gig/:catagory' element={<ProtectedRoute><Catagory/></ProtectedRoute>} />
       <Route path='/post' element={<Form/>} />
      </Routes>
 

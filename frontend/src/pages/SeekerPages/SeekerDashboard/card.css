@@ -13,7 +13,7 @@
     width:90vw ;
 }
 
-.card {
+.card1 {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 8px;
@@ -25,41 +25,41 @@
     transition: transform 0.2s;
 }
 
-.card:hover {
+.card1:hover {
     transform: translateY(-4px);
 }
-.card .img-container {
+.card1 .img-container {
     overflow: hidden;
     border-radius: 4px;
 }
-.card .img-container img {
+.card1 .img-container img {
     max-width: 100%;
     border-radius: 4px;
 
     transition: transform 0.3s ease;
 }
-.card .img-container img:hover {
+.card1 .img-container img:hover {
     transform: scale(1.09);
 
 }
 
-.card h2 {
+.card1 h2 {
     font-size: 1.5rem;
     margin: 12px 0;
 }
 
-.card p {
+.card1 p {
     font-size: 1rem;
     color: #666;
 }
 
-.card a {
+.card1 .a {
     display: inline-block;
     margin-top: 12px;
     color: #007bff;
     text-decoration: none;
 }
 
-.card a:hover {
+.card1 .a:hover {
     text-decoration: underline;
 }

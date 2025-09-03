@@ -1,24 +1,198 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.modelOverlay{
-    width: 100Vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 1000;
-    top: 0px;
-    right: 0px;
+.modelOverlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.562);
+}
+.model {
+  width: 90%;
+  max-width: 850px;
+  height: 80%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  margin: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 25px;
+  cursor:auto;
+  box-shadow: 0px 0px 3px rgba(169, 167, 167, 0.737);
+}
+.Cantent{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.562);
+    flex-direction: row;
+    justify-content: space-between;
 }
-.model{
-    height: 400px;
-    width: 400px;
-    background-color: white;
-    border-radius: 10px;
-    border: 2px solid black;
+.closing-model-cross{
+    cursor: pointer;
+}
+.para {
+  font-size: small;
+  color: rgba(98, 97, 97, 0.92);
+}
+.Cantent1 {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+  gap: 20px;
+}
+
+.Upper_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.479);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Date_job {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  color: rgba(98, 97, 97, 0.92);
+}
+
+.last_cantent1 {
+  display: flex;
+  gap: 3%;
+}
+
+#Last1 {
+  margin-left: 6%;
+}
+
+.Card_LastElement {
+  gap: 10%;
+  display: flex;
+  margin-right: 15%;
+}
+
+.last_cantent1 {
+  font-size: small;
+  color: rgb(34, 34, 34);
+  border: 1px solid gray;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:750;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.last_cantent2 {
+  height: 34px;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  color: aliceblue;
+  font-weight: 600;
+  font-size: small;
+  padding: 2%;
+  border: 1px solid gray;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+}
+
+@media(max-width:600px){
+    .Upper_content{
+        flex-direction: column;
+        position: relative;
+    }
+    .Card_LastElement{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .active{
+        position: absolute;
+        right: 4px;
+        top: 6px;
+    }
+    #para1{
+        font-size: 10px;
+        font-weight: 400;
+        padding: 0px 0px;
+        border-radius: 4px;
+    }
+    .Date_job{
+        width: 100%;
+    }
+    .last_cantent1{
+        width: 150px;
+    }
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  gap: 7%;
+}
+
+#para1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: rgb(5, 226, 5);
+}
+#para2 {
+  color: #737373;
+  font-size: small;
+}
+.data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+#job {
+  height: 26px;
+  width: 50px;
+  color: rgb(52, 51, 51);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 2px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(139, 139, 139, 0.632);
+}
+.last_cantent {
+  transition-property: all;
+  transition-timing-function: linear;
+}
+.last_cantent1:hover {
+  background-color: rgb(249, 19, 19);
+  color: #ffffff;
+}
+.last_cantent2:hover {
+  background-color: rgb(249, 19, 19);
+  color: #ffffff;
+}
+button {
+  border: none;
 }

@@ -1,6 +1,11 @@
-
-.main-title{
-    width: 100vw;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-title1{
+    width: 100%;
     margin-top: 4rem;
     margin-bottom: 4rem;
     display: flex;
@@ -9,7 +14,7 @@
     align-items: center;    
 }
 
-.main-title h6{
+.main-title1 h6{
 font-size: 18px;
 font-weight: 400;
 background-color:aliceblue;
@@ -17,11 +22,11 @@ border-radius: 15px;
 padding:0  1rem 0 1rem;
 }
  
-.main-title h1{
+.main-title1 .mainHead{
     font-size: 60px;
     font-weight: 500;
 }
-.main-title h1 span{
+.main-title1 .mainHead span{
 
     background: linear-gradient(to right,#02b2f8,#fa4701);
     -webkit-background-clip: text;
@@ -29,20 +34,19 @@ padding:0  1rem 0 1rem;
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
-.main-title p{
+.main-title1 p{
     color: grey;
 }
 
 @media(max-width:500px){
-    .main-title{
-        padding: 20px;
-    }
-    .main-title h1{
-        font-size: 30px;
+   
+    .main-title1 .mainHead{
+        font-size: 28px;
         padding-top:20px ;
+        font-weight: 520;
     }
-    .main-title p{
-        font-size: 10px;
+    .main-title1 p{
+        font-size: 12px;
         
     }
 }
@@ -109,13 +113,14 @@ padding:0  1rem 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .analytic div h1{
    font-weight: 800;
    font-size: 20px;
 }
-.analytic div p{
+.analytic div .t1{
 color: rgba(128, 128, 128, 0.868);    
 }
 
@@ -135,22 +140,26 @@ color: rgba(42, 139, 249, 0.916);
  .search-bar img{
     height: 15px;
 } 
+.search-bar{
+    width: 80vw;
+}
 
 .search-bar input::placeholder{
     font-size: 10px;
     
 }
 .search-bar input{
-    width: 5rem;
+    width: 9rem;
 }
 .search-bar button{
     padding: 5px;
 }
 #category {
+    width: 15px;
     font-size: 12px;
     padding: 3px;   
     height: 25px;
-    border: 1px solid rgb(246, 234, 214);
+    box-shadow: none;
     border-radius: 8px;
 }
 #category:focus {
@@ -162,8 +171,17 @@ color: rgba(42, 139, 249, 0.916);
     padding: 3px;
     
 }
-.analytic div p{
+.analytic div{
+    justify-content: center;
+    align-items: center;
+}
+.analytic{
+    width: 80vw;
+    margin-bottom: 40px;
+}
+.analytic div .t1{
     font-size: .7rem;
+    text-align: center;
 }
 }
 
@@ -187,9 +205,19 @@ color: rgba(42, 139, 249, 0.916);
 .provide p{
     color: gray;
 }
+@media (max-width:500px){
+    .provide{
+        width: 90vw;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    .provide p{
+        text-align: center;
+    }
+}
 
 .footer-content{
-    width: 100vw;
+    width: 100%;
     height: 400px;
     color: white;
     margin: auto;
@@ -199,7 +227,7 @@ color: rgba(42, 139, 249, 0.916);
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-    background-color:  rgba(42, 139, 249, 0.916);
+    background-color:  rgba(49, 116, 192, 0.916);
 }
 
 
@@ -230,7 +258,7 @@ color: rgba(42, 139, 249, 0.916);
 }
 
 .footer{
-   padding: 40px;
+   padding: 10px;
 }
 
 
@@ -240,4 +268,32 @@ color: rgba(42, 139, 249, 0.916);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media(max-width:500px){
+   .footer-content{
+    height: auto;
+    gap: 5px;
+    padding: 10px 15px;
+    line-height: normal;
+   }
+   .footer-content h1{
+    font-size: 20px;
+   }
+   .footer-content .footer-p{
+    font-size: 15px;
+    font-weight:100;
+   }
+   .footer-content button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+   }
+   .footer{
+    padding: 0px 7px;
+    margin-bottom: 100px;
+   }
+   .footer p{
+      font-size: 15px;
+      text-align: center;
+   }
 }

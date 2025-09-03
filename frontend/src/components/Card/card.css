@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif; 
 }
 .card{
-    width: 300px;
+    width: 350px;
     border: 2px solid rgb(246, 123, 193);
     border-radius: 8px;
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
@@ -13,7 +13,7 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     transition: transform 0.2s;
 }
@@ -28,7 +28,7 @@
 
 .desc{
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
@@ -69,7 +69,10 @@
     margin-bottom: 20px;
     border-bottom: 3px solid rgb(200, 200, 200);
 }
-
+.sender-location{
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.73);
+}
 .buttons{
     width: 100%;
     display: flex;
