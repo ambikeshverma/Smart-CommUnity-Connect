@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.profilePage{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.profile-cover{
+    width: 100%;
+    height: 200px;
+    background:linear-gradient(45deg, pink, skyblue);
+}
+.profile1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 50px;
+    padding-bottom: 30px;
+}
+.image-data{
+    display: flex;
+    gap: 30px;
+}
+.image-data .profile-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -50px;
+    background-color: aqua;
+}
+.profile-image img{
+    transition: all ease 500ms;
+}
+.profile-image img:hover{
+    transform: scale(1.1);
+}
+.data{
+    padding-top: 50px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+.data .user-name{
+    font-size: 28px;
+    color: black;
+}
+.data .user-bio{
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 8px;
+}
+.data .user-buttons{
+    display: flex;
+    gap: 10px;
+}
+.user-button{
+    padding: 5px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+} 
+.user-buttons .btn1{
+   background-color: black;
+   color: white;
+}
+.user-buttons .btn2{
+    border: 1px solid black;
+    color: black;
+}
+.following-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 30px;
+}
+.star-rating{
+    width: 150px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.star-rating .star{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.star-rating .str1{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.star-rating .str2{
+   background-color: blueviolet;
+   color: white;
+}
+.star-rating .str3{
+    background-color: black;
+    color: white;
+}
+.followers-cube{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.small-cube{
+   
+   padding: 4px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     border-radius: 6px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.637);
+}
+.small-cube h5{
+    font-size: 15px;
+    color: black;
+}
+.small-cube h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}

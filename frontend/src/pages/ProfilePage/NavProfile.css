@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.profileNav{
+    display: flex;
+    gap: 28px;
+    width: 100%;
+    border-bottom: 2px solid gray;
+}
+.profileNav li{
+    height: 30px;
+    list-style: none;
+    cursor: pointer;
+    transition: all ease-in 100ms;
+    position: relative;
+}
+.profileNav li::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0px;
+    bottom: 6px;
+    left: 0px;
+    background-color:rgb(215, 80, 1);;
+    transition: all ease-in-out 300ms 0s;
+
+}
+.profileNav li:hover{
+    color:rgb(215, 80, 1);
+}
+.profileNav li:hover::after{
+    width: 100%;
+}
