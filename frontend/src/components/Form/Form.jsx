@@ -60,7 +60,7 @@ if(!isOpenPostForm) return null
                 <label htmlFor="">Location</label>
                 <input type="text" value={location} onChange={(e)=>setLocation(e.target.value)} placeholder='Enter your location' />
                 <label htmlFor="">Description</label>
-                <textarea value={description} onChange={(e)=>{setdescription(e.target.value)}} name="" id="" cols="30" rows="10" required="required" maxLength={150}></textarea>
+                <textarea value={description} onChange={(e)=>{setdescription(e.target.value)}} name="" id="" cols="30" rows="5" required="required" maxLength={150}></textarea>
                 <div className="buttons">
                     <button className='cancel' type='button' onClick={isClosePostForm}>Cancel</button>
                     <button className="post" type='submit'>Post Request</button>
