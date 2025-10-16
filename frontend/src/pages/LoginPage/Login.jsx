@@ -59,7 +59,7 @@ const Login = () => {
       <div className="fullPage">
         <div className="regContainer">
           <div className="imageCont">
-            <img src="/src/assets/Regis Logo2.jpeg" alt="" />
+            <img src="/assets/Regis Logo2.jpeg" alt="" />
           </div>
           <div className="formCont">
             <form action="" onSubmit={handleLogin}>
