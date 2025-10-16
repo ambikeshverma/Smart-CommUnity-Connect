@@ -9,6 +9,7 @@ export default function Request({
   gigId, // pass from parent
 }) {
   const [requests, setRequests] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   // Fetch requests gig-wise
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Request({
 
     const fetchRequests = async () => {
       try {
+        setLoading(true)
         const res = await axios.get(
           `${import.meta.env.VITE_BACKEND_URL}/request/getAllReceived/${gigId}`,
           {
@@ -30,6 +32,8 @@ export default function Request({
           error.response?.data?.message || "Failed to fetch requests"
         );
         setRequests([]);
+      }finally{
+        setLoading(false)
       }
     };
 
@@ -71,7 +75,7 @@ export default function Request({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="Heading-2">Manage Requests</div>
-
+        {loading && <Loader></Loader>}
         {requests.length > 0 ? (
           requests.map((req) => (
             <div className="Request_Card-2" key={req._id}>

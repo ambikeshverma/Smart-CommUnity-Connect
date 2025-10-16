@@ -6,7 +6,6 @@ import Login from './pages/LoginPage/Login'
 import { Routes,Route } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRotes/ProtectedRoute'
 import Profile from './pages/ProfilePage/Profile'
-import Loader from './components/Loading/Loader'
 
 
 
@@ -18,7 +17,6 @@ const App = () => {
       <Route path='/' element={<ProtectedRoute><HomePage/></ProtectedRoute>} />
       <Route path='/category-wise-gig/:catagory' element={<ProtectedRoute><Catagory/></ProtectedRoute>} />
       <Route path='/profile' element={<ProtectedRoute><Profile></Profile></ProtectedRoute>} />
-      <Route path='/loader' element={<Loader></Loader>} />
     </Routes>
 
   )

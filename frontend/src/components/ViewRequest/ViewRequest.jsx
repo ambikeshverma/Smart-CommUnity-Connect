@@ -4,6 +4,7 @@ import "./ViewRequest.css";
 
 const ViewRequest = ({ isOpenRequest, onCloseRequest }) => {
   const [sentRequests, setSentRequests] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   // Fetch sent requests when sidebar opens
 // Fetch sent requests when sidebar opens
@@ -11,6 +12,7 @@ useEffect(() => {
   if (isOpenRequest) {
     const fetchSentRequests = async () => {
       try {
+        setLoading(true)
         const token = localStorage.getItem("token"); 
         const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/request/getAllSent`, {
           headers: {
@@ -20,6 +22,8 @@ useEffect(() => {
         setSentRequests(res.data.sentRequests);
       } catch (err) {
         console.error("Error fetching sent requests:", err);
+      }finally{
+        setLoading(false)
       }
     };
     fetchSentRequests();
@@ -47,6 +51,7 @@ useEffect(() => {
           </div>
 
           <div className="sideBarContent">
+            {loading && <Loader></Loader>}
             {sentRequests.length === 0 ? (
               <p className="noRequests">No sent requests</p>
             ) : (

@@ -5,11 +5,13 @@ import { useState, } from "react";
 import {toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import "./Registration.css";
+import Loader from "../../components/Loading/Loader";
 const Registration = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
 
 
@@ -54,6 +56,7 @@ const Registration = () => {
 
 
     try {
+      setLoading(true)
       const response = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/user/register`,
         {
@@ -83,6 +86,8 @@ const Registration = () => {
         error.response?.data?.message || "Registration failed. Please try again."
       );
     }
+  }finally{
+    setLoading(false)
   }
 };
 
@@ -148,6 +153,7 @@ const Registration = () => {
                   }}
                   required
                 />
+                {loading && <Loader></Loader>}
                 <div className="buttons">
                   <button className="cancel" onClick={reset}>Reset</button>
                   <button className="post" type="submit">Register</button>

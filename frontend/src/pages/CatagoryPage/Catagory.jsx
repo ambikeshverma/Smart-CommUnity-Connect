@@ -4,12 +4,15 @@ import Card from "../../components/Card/Card";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Loader from "../../components/Loading/Loader";
 const Catagory = () => {
   const { catagory } = useParams();
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(false)
 useEffect(() => {
   const fetchItems = async () => {
     try {
+      setLoading(true)
       const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/gig/allGig?catagory=${encodeURIComponent(catagory)}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
@@ -21,6 +24,8 @@ useEffect(() => {
         toast.error(err.response.data.message);
       }
       setItems([]); // ensure items is always array
+    }finally{
+      setLoading(false)
     }
   };
 
@@ -35,6 +40,7 @@ useEffect(() => {
           <h4>Find your requirements</h4>
         </div>
         <div className="cards">
+          {loading && <Loader></Loader>}
           {items.length > 0 ? (
             items.map((item) => <Card key={item._id} {...item} />)
           ) : (

@@ -5,18 +5,21 @@ import {UserType} from "../Context/UserTypeContext"; // adjust import path
 import { toast } from "react-toastify";
 import './ViewPost.css'
 import Request from '../Request/Request';
+import Loader from '../Loading/Loader';
 
 const ViewPost = ({ isOpen, onClose }) => {
   const { userType } = useContext(UserType); // get current role from context
   const [posts, setPosts] = useState([]);
   const [isOpenRequestPostWise, setIsOpenRequestPostWise] = useState(false)
   const [selectedGigId, setSelectedGigId] = useState(null);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     if (!isOpen) return; // only fetch when modal is open
 
     const fetchPosts = async () => {
       try {
+        setLoading(true)
         const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/gig/getAll/postedGig`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
@@ -25,6 +28,8 @@ const ViewPost = ({ isOpen, onClose }) => {
         console.error("Error fetching posts:", err);
         toast.error(err.response?.data?.message || "Failed to load posts");
         setPosts([]);
+      }finally{
+        setLoading(false)
       }
     };
 
@@ -41,6 +46,7 @@ const ViewPost = ({ isOpen, onClose }) => {
                 <h3>My Posts</h3>
                 <button className='closing-model-cross' onClick={onClose}>✖</button>
             </div>
+            {loading && <Loader></Loader>}
             {posts.length > 0 ? (
           posts.map((post) => (
             <div class="Card Upper_content">
