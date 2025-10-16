@@ -1,5 +1,5 @@
 import React from 'react'
-import './Card.css'
+import './card.css'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
