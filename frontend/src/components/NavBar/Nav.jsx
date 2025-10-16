@@ -36,7 +36,7 @@ const Nav = () => {
           <ViewRequest  isOpenRequest={isModelOpenRequest} onCloseRequest={()=>setIsModelOpenRequest(false)}></ViewRequest>
 
           <div className="postBox">
-            <img src="/assets/document.png" width="40px" alt="post" onClick={() => setIsModalOpen(true)} />
+            <img src="/assets/document.png" width="35px" alt="post" onClick={() => setIsModalOpen(true)} />
             <h5 onClick={() => setIsModalOpen(true)}>My Posts</h5>
             <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></ViewPost>
           </div>
