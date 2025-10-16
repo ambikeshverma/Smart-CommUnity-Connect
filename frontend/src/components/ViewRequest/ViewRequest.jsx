@@ -12,7 +12,7 @@ useEffect(() => {
     const fetchSentRequests = async () => {
       try {
         const token = localStorage.getItem("token"); 
-        const res = await axios.get("http://localhost:3000/request/getAllSent", {
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/request/getAllSent`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

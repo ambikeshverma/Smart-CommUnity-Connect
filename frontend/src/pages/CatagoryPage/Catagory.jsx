@@ -10,11 +10,10 @@ const Catagory = () => {
 useEffect(() => {
   const fetchItems = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/gig/allGig?catagory=${encodeURIComponent(catagory)}`, {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/gig/allGig?catagory=${encodeURIComponent(catagory)}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
-      console.log(response.data)
-      // make sure we store array, not object
+      // console.log(process.env.REACT_APP_BACKEND_URL)
       setItems(response.data.allGig || []);
     } catch (err) {
       console.error("Error fetching:", err);

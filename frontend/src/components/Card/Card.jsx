@@ -6,7 +6,7 @@ import axios from 'axios'
 const Card = (props) => {
     const handleRequest = async(gigId)=>{
         try{
-          const response = await axios.post(`http://localhost:3000/request/sendRequest/${gigId}`,
+          const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/request/sendRequest/${gigId}`,
             {},
             {
               headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }

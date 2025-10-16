@@ -13,7 +13,7 @@ const UserTypeContext = ({children}) => {
 
       // API call (no userId needed)
       const res = await axios.patch(
-        "http://localhost:3000/user/roleUpdate",
+        `${import.meta.env.VITE_BACKEND_URL}/user/roleUpdate`,
         { role: newType },
         // { withCredentials: true } // ensure cookies/token are sent
         {

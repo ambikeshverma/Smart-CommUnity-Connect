@@ -71,16 +71,30 @@ router.post('/login',async (req, res) => {
       },
     });
   } catch (err) {
-    res.status(500).json({ error: err.message || "Server error"});
+    res.status(500).json({ message: err.message || "Server error"});
   }
 })
 
+//get user details
+router.get("/getUser",authMiddleware, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const user = await createdUser.findById(userId).select("-password");
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ message: err.message || "Server error" });
+  }
+});
+
+//token verify
 router.get("/verify",authMiddleware, (req, res) => {
   res.json({ message: "Token is valid", user: req.user });
 });
 
 //role Update
-
 router.patch("/roleUpdate",authMiddleware, async (req, res) => {
   try {
     const { role } = req.body; // "seeker" or "provider"

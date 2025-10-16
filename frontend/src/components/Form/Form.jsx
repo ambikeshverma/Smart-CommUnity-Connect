@@ -12,7 +12,7 @@ const Form = ({isOpenPostForm,isClosePostForm}) => {
         e.preventDefault();
         try {
            await axios.post(
-           `http://localhost:3000/gig/createGig`,
+           `${import.meta.env.VITE_BACKEND_URL}/gig/createGig`,
            {
            title,
            catagory,
@@ -53,8 +53,8 @@ if(!isOpenPostForm) return null
                     <option value="Food & Nutrition">Food & Nutrition</option>
                     <option value="Clothes & Accessories">Clothes & Accessories</option>
                     <option value="Education & Skill Development">Education & Skill Development</option>
-                    <option value="Health & Wellness">Health & Wellness</option>
-                    <option value="Environment & Sustainability">Environment & Sustainability</option>
+                    <option value="Local Workers">Local Workers</option>
+                    <option value="Job Assistance">Job Assistance</option>
                     <option value="Community Service">Community Service</option>
                 </select>
                 <label htmlFor="">Location</label>

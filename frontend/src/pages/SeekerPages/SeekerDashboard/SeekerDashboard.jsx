@@ -22,8 +22,8 @@ const SeekerDashboard = () => {
 
         <img className="filter1" src="\src\assets\filter.png" alt="" />
 
-        <select id="category">
-          <option value="" selected>
+        <select id="category" defaultValue="">
+          <option value="">
             All Category
           </option>
           <option value="1">Jobs & Employment</option>
@@ -71,7 +71,7 @@ const SeekerDashboard = () => {
           img="\src\assets\job1.webp"
           title="Job Assistance"
           description="Get help with job applications and interviews."
-          catagory="job"
+          catagory="Job Assistance"
         />
         <Cards
           img="\src\assets\food.png"
@@ -95,13 +95,13 @@ const SeekerDashboard = () => {
           img="\src\assets\education.jpg"
           title="Education Resources"
           description="Discover educational programs and scholarships."
-          catagory="education"
+          catagory="Education & Skill Development"
         />
         <Cards
           img="\src\assets\local worker.png"
           title="Local Worker"
           description="Find local workers and services."
-          catagory="localworker"
+          catagory="Local Workers"
         />
       </div>
 

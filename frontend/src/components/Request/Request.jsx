@@ -17,7 +17,7 @@ export default function Request({
     const fetchRequests = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/request/getAllReceived/${gigId}`,
+          `${import.meta.env.VITE_BACKEND_URL}/request/getAllReceived/${gigId}`,
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
@@ -40,7 +40,7 @@ export default function Request({
   const handleUpdateStatus = async (requestId, newStatus) => {
     try {
       await axios.patch(
-        `http://localhost:3000/request/updateStatus/${requestId}`, // replace with your backend route
+        `${import.meta.env.VITE_BACKEND_URL}/request/updateStatus/${requestId}`, // replace with your backend route
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

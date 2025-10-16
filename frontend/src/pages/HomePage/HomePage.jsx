@@ -18,12 +18,12 @@ const HomePage = () => {
       const token = localStorage.getItem("token");
       const verifyToken = async () => {
         try {
-          const response  = await axios.get('http://localhost:3000/user/verify', {
+           await axios.get(`${import.meta.env.VITE_BACKEND_URL}/user/verify`, {
             headers: {
               Authorization: `Bearer ${token}`
             }
           });
-          console.log('Protected data:', response.data);
+
         } catch (error) {
           console.error('Error accessing protected route:', error);
           localStorage.removeItem("token");

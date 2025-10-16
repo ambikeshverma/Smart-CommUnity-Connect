@@ -22,8 +22,8 @@ const ProviderDashboard = () => {
 
         <img src="\src\assets\filter.png" alt="" />
 
-        <select id="category">
-          <option value="" selected>
+        <select id="category" defaultValue="">
+          <option value="">
             All Category
           </option>
           <option value="1">Jobs & Employment</option>
@@ -71,13 +71,13 @@ const ProviderDashboard = () => {
           img="\src\assets\job1.webp"
           title="Job Assistance"
           description="Get help with job applications and interviews."
-          link="/jobs"
+          catagory="Job Assistance"
         />
         <Cards
           img="\src\assets\food.png"
-          title="Food Assistance"
+          title="Food & Nutrition"
           description="Find local food banks and meal programs."
-          link="/food"
+          catagory="Food & Nutrition"
         />
         <Cards
           img="\src\assets\blood.jpg"
@@ -89,19 +89,19 @@ const ProviderDashboard = () => {
           img="\src\assets\Books.jpg"
           title="Book & Education"
           description="Find educational resources and support."
-          link="/education"
+          catagory="Book donation"
         />
         <Cards
           img="\src\assets\education.jpg"
           title="Education Resources"
           description="Discover educational programs and scholarships."
-          link="/education"
+          catagory="Education & Skill Development"
         />
         <Cards
           img="\src\assets\local worker.png"
           title="Local Worker"
           description="Find local workers and services."
-          link="/localworker"
+          catagory="Local Workers"
         />
       </div>
 

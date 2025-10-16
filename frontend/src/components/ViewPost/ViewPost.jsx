@@ -17,7 +17,7 @@ const ViewPost = ({ isOpen, onClose }) => {
 
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/gig/getAll/postedGig", {
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/gig/getAll/postedGig`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setPosts(res.data.allPostedGig || []);
