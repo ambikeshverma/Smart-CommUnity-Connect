@@ -38,7 +38,7 @@ const Profile = () => {
       <div className="profile1">
         <div className="image-data">
           <div className="profile-image">
-            <img src="/src/assets/Profile.jpg"  alt="" />
+            <img src="/assets/Profile.jpg"  alt="" />
           </div>
           <div className="data">
             <div className="user-name">{user.name}</div>

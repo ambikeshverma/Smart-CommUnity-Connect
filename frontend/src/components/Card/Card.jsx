@@ -22,17 +22,17 @@ const Card = (props) => {
   return (
     <>
     <div class="card">
-        <img class="cover" src="/src/assets/Cover photo.jpg" alt="" />
+        <img class="cover" src="/assets/Cover photo.jpg" alt="" />
         <h3 class="desc">{props.description}</h3>
         <div className="titleRating">
             <h2>{props.title}</h2>
             <span>
-                <img src="/src/assets/rating image.png" alt="" width="20px" />
+                <img src="/assets/rating image.png" alt="" width="20px" />
                 <p>4.5</p>
             </span>
         </div>
         <div className="profile">
-            <img src="/src/assets/Profile photo.jpg" alt="" width="60px" />
+            <img src="/assets/Profile photo.jpg" alt="" width="60px" />
             <div>
                 <h3>{props.postedBy.name}</h3>
                 <h6 className='sender-location'>{props.location}</h6>

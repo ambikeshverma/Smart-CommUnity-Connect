@@ -91,7 +91,7 @@ const Registration = () => {
       <div className="fullPage">
         <div className="regContainer">
           <div className="imageCont">
-            <img src="/src/assets/Regis Logo2.jpeg" alt="" />
+            <img src="/assets/Regis Logo2.jpeg" alt="" />
           </div>
           <div className="formCont">
             <form action="" onSubmit={handleRegister}>
@@ -99,11 +99,11 @@ const Registration = () => {
               <div className="sign">Sign up with Open Account</div>
               <div className="google">
                 <span className="google1">
-                  <img src="/src/assets/Google icon.webp" width="20px" alt="" />
+                  <img src="/assets/Google icon.webp" width="20px" alt="" />
                   <h5>Google</h5>
                 </span>
                 <span className="google1">
-                  <img src="/src/assets/Apple Icon.png" width="20px" alt="" />
+                  <img src="/assets/Apple Icon.png" width="20px" alt="" />
                   <h5>Apple ID</h5>
                 </span>
               </div>

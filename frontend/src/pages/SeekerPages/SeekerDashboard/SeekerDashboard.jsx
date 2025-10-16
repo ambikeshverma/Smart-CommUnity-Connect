@@ -16,11 +16,11 @@ const SeekerDashboard = () => {
 
       <div className="search-bar">
         <div className="search-input">
-          <img src="\src\assets\search.png" alt="" />
+          <img src="\assets\search.png" alt="" />
           <input type="text" placeholder="What do you need help with?" />
         </div>
 
-        <img className="filter1" src="\src\assets\filter.png" alt="" />
+        <img className="filter1" src="\assets\filter.png" alt="" />
 
         <select id="category" defaultValue="">
           <option value="">
@@ -68,37 +68,37 @@ const SeekerDashboard = () => {
 
       <div className="card-container">
         <Cards
-          img="\src\assets\job1.webp"
+          img="\assets\job1.webp"
           title="Job Assistance"
           description="Get help with job applications and interviews."
           catagory="Job Assistance"
         />
         <Cards
-          img="\src\assets\food.png"
+          img="\assets\food.png"
           title="Food Assistance"
           description="Find local food banks and meal programs."
           catagory="Food & Nutrition"
         />
         <Cards
-          img="\src\assets\blood.jpg"
+          img="\assets\blood.jpg"
           title="Blood Donation"
           description="Find blood donation centers and information."
           catagory="Blood donation"
         />
         <Cards
-          img="\src\assets\Books.jpg"
+          img="\assets\Books.jpg"
           title="Book & Education"
           description="Find educational resources and support."
           catagory="Book donation"
         />
         <Cards
-          img="\src\assets\education.jpg"
+          img="\assets\education.jpg"
           title="Education Resources"
           description="Discover educational programs and scholarships."
           catagory="Education & Skill Development"
         />
         <Cards
-          img="\src\assets\local worker.png"
+          img="\assets\local worker.png"
           title="Local Worker"
           description="Find local workers and services."
           catagory="Local Workers"
@@ -107,7 +107,7 @@ const SeekerDashboard = () => {
 
       <div className="footer-content">
         <img
-          src="\src\assets\logoman.png"
+          src="\assets\logoman.png"
           alt="Smart Community Platform Logo"
         />
         <h1>Ready to Make a Difference?</h1>

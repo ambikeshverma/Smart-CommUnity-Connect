@@ -11,7 +11,7 @@ export default function Profile_posts({post}) {
   return (
     <>
       <div className={Style.profile_posts_container}>
-        <img src="src/assets/Cover photo.jpg" alt="Profile" />
+        <img src="/assets/Cover photo.jpg" alt="Profile" />
     
             <div key={post.id} className={Style.post_card}>
               <h3>{post.title}</h3>

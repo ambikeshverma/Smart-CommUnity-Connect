@@ -23,7 +23,7 @@ const Nav = () => {
       <div className="navbar">
         {/* Logo + Title */}
         <div className="logo">
-          <img src="/src/assets/logo.jpg" width="60px" alt="logo" />
+          <img src="/assets/logo.jpg" width="60px" alt="logo" />
           <div className="title">
             <h1 className="titleHeading">CommUnity Connect</h1>
             <p>Helping communities thrive together</p>
@@ -32,23 +32,23 @@ const Nav = () => {
 
         {/* Desktop Buttons */}
         <div className="buttonsBox">
-          <img className="bell" src="/src/assets/Bell icon.png" onClick={()=>setIsModelOpenRequest(true)} width="25px" alt="bell" />
+          <img className="bell" src="/assets/Bell icon.png" onClick={()=>setIsModelOpenRequest(true)} width="25px" alt="bell" />
           <ViewRequest  isOpenRequest={isModelOpenRequest} onCloseRequest={()=>setIsModelOpenRequest(false)}></ViewRequest>
 
           <div className="postBox">
-            <img src="/src/assets/document.png" width="20px" alt="post" />
+            <img src="/assets/document.png" width="20px" alt="post" />
             <h5 onClick={() => setIsModalOpen(true)}>My Posts</h5>
             <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></ViewPost>
           </div>
 
           <div className="toggleBox">
             <div className="seekerBox">
-              <img src="/src/assets/person.png" width="30px" className="pt-2" alt="seeker" />
+              <img src="/assets/person.png" width="30px" className="pt-2" alt="seeker" />
               <h4>I'm seeking help</h4>
             </div>
             <UserTypeToggle />
             <div className="helperBox">
-              <img src="/src/assets/hand.png" width="30px" alt="helper" />
+              <img src="/assets/hand.png" width="30px" alt="helper" />
               <h4>I want to help</h4>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Nav = () => {
           </button>
           <button className="logout" onClick={handleLogout}>Logout</button>
           <div className="Profile10" onClick={() => navigate("/profile")}>
-          <img src="/src/assets/Profile.jpg" width="50px" alt="Profile" />
+          <img src="/assets/Profile.jpg" width="50px" alt="Profile" />
         </div>
         </div>
 
@@ -76,23 +76,23 @@ const Nav = () => {
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <button className="closeBtn" onClick={() => setIsOpen(false)}>✖</button>
 
-        <img className="bell" src="/src/assets/Bell icon.png" onClick={()=>setIsModelOpenRequest(true)} width="25px" alt="bell" />
+        <img className="bell" src="/assets/Bell icon.png" onClick={()=>setIsModelOpenRequest(true)} width="25px" alt="bell" />
           <ViewRequest  isOpenRequest={isModelOpenRequest} onCloseRequest={()=>setIsModelOpenRequest(false)}></ViewRequest>
 
         <button className="postBox" onClick={() => setIsModalOpen(true)}>
               <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></ViewPost>
-          <img src="/src/assets/document.png" width="20px" alt="post" />
+          <img src="/assets/document.png" width="20px" alt="post" />
           <h5>My Posts</h5>
         </button>
 
         <div className="toggleBox">
           <div className="seekerBox">
-            <img src="/src/assets/person.png" width="30px" alt="seeker" />
+            <img src="/assets/person.png" width="30px" alt="seeker" />
             <h4>I'm seeking help</h4>
           </div>
           <UserTypeToggle />
           <div className="helperBox">
-            <img src="/src/assets/hand.png" width="30px" alt="helper" />
+            <img src="/assets/hand.png" width="30px" alt="helper" />
             <h4>I want to help</h4>
           </div>
         </div>
