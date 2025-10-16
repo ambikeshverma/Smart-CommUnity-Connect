@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "./mypost.css";
+import Loader from "../Loading/Loader";
 
 export default function Request({
   isOpenRequestPostWise,
