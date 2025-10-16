@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../../SeekerPages/SeekerDashboard/cards";
+import Cards from "../../SeekerPages/SeekerDashboard/Cards";
 import "../../SeekerPages/SeekerDashboard/SeekerDashboard.css";
 
 const ProviderDashboard = () => {
