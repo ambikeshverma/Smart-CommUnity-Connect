@@ -1,6 +1,6 @@
 import React from "react";
 import "./SeekerDashboard.css";
-import Cards from "./cards";
+import Cards from "./Cards";
 
 const SeekerDashboard = () => {
   return (
