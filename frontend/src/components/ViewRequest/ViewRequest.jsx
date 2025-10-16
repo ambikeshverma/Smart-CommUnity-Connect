@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ViewRequest.css";
+import Loader from "../Loading/Loader";
 
 const ViewRequest = ({ isOpenRequest, onCloseRequest }) => {
   const [sentRequests, setSentRequests] = useState([]);
