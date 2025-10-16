@@ -4,10 +4,12 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import '../RegistrationPage/Registration.css'
 import {toast } from 'react-toastify';
+import Loader from "../../components/Loading/LoadingState";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   
   const navigate = useNavigate();
 
@@ -27,6 +29,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
+      setLoading(true)
       const response = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/user/login`,
         {
@@ -52,6 +55,8 @@ const Login = () => {
       } else {
         toast.error("An error occurred. Please try again.");
       }
+    }finally{
+      setLoading(false)
     }
   };
   return (
@@ -96,6 +101,7 @@ const Login = () => {
                     setPassword(e.target.value);
                   }}
                 />
+                {loading && <Loader></Loader>}
                 <div className="buttons">
                   <button className="cancel" onClick={reset}>Reset</button>
                   <button className="post" type="submit" >Login</button>
