@@ -1,5 +1,5 @@
 import React from "react";
-import "./LoadingState.css";
+import "./Loader.css";
 
 const Loader = () => {
   return <div className="loader"></div>;

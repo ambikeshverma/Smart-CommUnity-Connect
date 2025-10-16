@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import '../RegistrationPage/Registration.css'
 import {toast } from 'react-toastify';
-import Loader from "../../components/Loading/LoadingState";
+import Loader from "../../components/Loading/Loader";
 
 const Login = () => {
   const [email, setEmail] = useState("");
