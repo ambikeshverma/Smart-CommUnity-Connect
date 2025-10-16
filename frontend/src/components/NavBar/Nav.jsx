@@ -35,10 +35,10 @@ const Nav = () => {
           <img className="bell" src="/assets/Bell icon.png" onClick={()=>setIsModelOpenRequest(true)} width="25px" alt="bell" />
           <ViewRequest  isOpenRequest={isModelOpenRequest} onCloseRequest={()=>setIsModelOpenRequest(false)}></ViewRequest>
 
-          <div className="postBox">
-            <img src="/assets/document.png" width="20px" alt="post" />
-            <h5 onClick={() => setIsModalOpen(true)}>My Posts</h5>
+          <div className="postBox" onClick={() => setIsModalOpen(true)}>
             <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></ViewPost>
+            <img src="/assets/document.png" width="20px" alt="post" />
+            <h5>My Posts</h5>
           </div>
 
           <div className="toggleBox">
@@ -53,10 +53,10 @@ const Nav = () => {
             </div>
           </div>
 
-          <button className="postRequestBtn">
-            <span>+</span>
-            <span className="pl-2" onClick={()=>setIsOpenPostForm(true)}>Post Request</span>
+          <button className="postRequestBtn" onClick={()=>setIsOpenPostForm(true)}>
             <Form isOpenPostForm={isOpenPostForm} isClosePostForm={()=>setIsOpenPostForm(false)}></Form>
+            <span>+</span>
+            <span className="pl-2" >Post Request</span>
           </button>
           <button className="logout" onClick={handleLogout}>Logout</button>
           <div className="Profile10" onClick={() => navigate("/profile")}>
@@ -97,7 +97,8 @@ const Nav = () => {
           </div>
         </div>
 
-        <button className="postRequestBtn">
+        <button className="postRequestBtn" onClick={()=>setIsOpenPostForm(true)}>
+          <Form isOpenPostForm={isOpenPostForm} isClosePostForm={()=>setIsOpenPostForm(false)}></Form>
           <span>+</span>
           <span className="pl-2">Post Request</span>
         </button>
