@@ -118,6 +118,20 @@
   font-weight: 500;
   transition: background-color 0.3s, transform 0.2s;
 }
+
+.Profile10{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  overflow: hidden;
+}
 /* Hamburger */
 .hamburger {
   display: none;
