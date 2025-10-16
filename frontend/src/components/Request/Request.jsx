@@ -75,8 +75,10 @@ export default function Request({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="Heading-2">Manage Requests</div>
-        {loading && <Loader></Loader>}
-        {requests.length > 0 ? (
+        {loading ? <Loader></Loader>:
+        requests.length === 0 ? (
+          <p style={{ textAlign: "center", color: "gray" }}>No requests yet</p>
+        ):(
           requests.map((req) => (
             <div className="Request_Card-2" key={req._id}>
               <div className="merge">
@@ -128,8 +130,6 @@ export default function Request({
               </div>
             </div>
           ))
-        ) : (
-          <p style={{ textAlign: "center", color: "gray" }}>No requests yet</p>
         )}
       </div>
     </div>

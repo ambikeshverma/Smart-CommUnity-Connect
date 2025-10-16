@@ -46,8 +46,13 @@ const ViewPost = ({ isOpen, onClose }) => {
                 <h3>My Posts</h3>
                 <button className='closing-model-cross' onClick={onClose}>✖</button>
             </div>
-            {loading && <Loader></Loader>}
-            {posts.length > 0 ? (
+            {loading ? <Loader></Loader>: 
+             posts.length === 0 ?(
+          <p style={{ textAlign: "center", marginTop: "20px", color: "gray" }}>
+            No posts found for role <b>{userType}</b>
+          </p>
+        ):
+            (
           posts.map((post) => (
             <div class="Card Upper_content">
                 <div class="Cantent1">
@@ -79,10 +84,6 @@ const ViewPost = ({ isOpen, onClose }) => {
                 </div>
             </div>
                ))
-        ) : (
-          <p style={{ textAlign: "center", marginTop: "20px", color: "gray" }}>
-            No posts found for role <b>{userType}</b>
-          </p>
         )}
         </div>
     </div>

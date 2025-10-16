@@ -51,8 +51,8 @@ useEffect(() => {
           </div>
 
           <div className="sideBarContent">
-            {loading && <Loader></Loader>}
-            {sentRequests.length === 0 ? (
+            {loading ? <Loader></Loader>:
+            sentRequests.length === 0 ? (
               <p className="noRequests">No sent requests</p>
             ) : (
               sentRequests.map((req) => (
