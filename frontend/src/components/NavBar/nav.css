@@ -68,9 +68,9 @@
   transition: background-color 0.2s, transform 0.2s;
 }
 .postBox img{
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
 }
 .postBox h5{
   padding-top: 4px;
@@ -116,14 +116,14 @@
   transition: background-color 0.3s, transform 0.2s;
 }
 .postRequestBtn .pl-1{
-  margin-left: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-left: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .postRequestBtn .pl-2{
-  margin-right: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-right: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .logout{
   background-color: rgb(255, 87, 3);

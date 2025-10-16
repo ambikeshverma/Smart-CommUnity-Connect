@@ -49,6 +49,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+  margin-bottom: 10px;
   position: sticky;
   top: 0;
   background-color: white;
@@ -86,9 +87,6 @@
 }
 .bars .bar2 {
   transform: rotate(-45deg);
-}
-.sideBarContent{
-  margin-bottom: 10px;
 }
 .sideBarCard{
   width: 100%;
