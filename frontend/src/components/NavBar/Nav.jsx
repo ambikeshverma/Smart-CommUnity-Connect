@@ -36,7 +36,7 @@ const Nav = () => {
           <ViewRequest  isOpenRequest={isModelOpenRequest} onCloseRequest={()=>setIsModelOpenRequest(false)}></ViewRequest>
 
           <div className="postBox" onClick={() => setIsModalOpen(true)}>
-            <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></ViewPost>
+            <ViewPost isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onClick={(e) => e.stopPropagation()}></ViewPost>
             <img src="/assets/document.png" width="20px" alt="post" />
             <h5>My Posts</h5>
           </div>
