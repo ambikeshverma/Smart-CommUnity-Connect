@@ -1,0 +1,71 @@
+.profile_posts_container {
+  width: 230px;
+  margin: 10px ;
+  margin-top: 20px;
+  padding: 13px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+
+  
+}
+
+.post_card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+.post_card h3 {
+ font-size: large;
+ font-weight: 600;
+}
+.post_card p {
+  color: rgb(62, 61, 61);
+}
+
+.con{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+.post_card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 2px solid #007bff;
+
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+
+  transition: background-color 0.3s, color 0.3s, border 0.3s ;
+}
+.post_card button:hover {
+  background-color: #fafbfb;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+.post_card .edit-button {
+  background-color: #28a745;
+}
+.post_card .edit-button:hover {
+  background-color: #1e7e34;
+}
+.post_card .delete-button {
+  background-color: #dc3545;
+}
+.post_card .delete-button:hover {
+  background-color: #c82333;
+}
+.no_posts {
+  text-align: center;
+  color: #777;
+}
+

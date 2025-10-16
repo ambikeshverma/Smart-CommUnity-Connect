@@ -17,7 +17,7 @@ const App = () => {
       <Route path='/' element={<ProtectedRoute><HomePage/></ProtectedRoute>} />
       <Route path='/category-wise-gig/:catagory' element={<ProtectedRoute><Catagory/></ProtectedRoute>} />
       <Route path='/profile' element={<Profile></Profile>} />
-     </Routes>
+    </Routes>
 
   )
 }

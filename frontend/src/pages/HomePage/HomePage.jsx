@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import SeekerDashboard from '../SeekerPages/SeekerDashboard/SeekerDashboard'
 import ProviderDashboard from '../ProviderPages/ProviderDashboard/ProviderDashboard'
+import Profile_posts from '../../components/Profile_post/Profile_posts'
 
 const HomePage = () => {
     const {userType} = useContext(UserType)
@@ -42,6 +43,7 @@ const HomePage = () => {
     <>
     <Nav></Nav>
     {userType==="seeker"? (<SeekerDashboard></SeekerDashboard>) : (<ProviderDashboard></ProviderDashboard>)}
+  
     </>
   )
 }

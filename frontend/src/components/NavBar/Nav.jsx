@@ -59,6 +59,9 @@ const Nav = () => {
             <Form isOpenPostForm={isOpenPostForm} isClosePostForm={()=>setIsOpenPostForm(false)}></Form>
           </button>
           <button className="logout" onClick={handleLogout}>Logout</button>
+          <div className="Profile10" onClick={() => navigate("/profile")}>
+          <img src="/src/assets/Profile.jpg" width="50px" alt="Profile" />
+        </div>
         </div>
 
         {/* Hamburger (mobile only) */}
@@ -99,6 +102,7 @@ const Nav = () => {
           <span className="pl-2">Post Request</span>
         </button>
         <button className="logout" onClick={handleLogout}>Logout</button>
+        
       </div>
     </>
   );
