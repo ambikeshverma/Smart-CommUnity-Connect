@@ -16,7 +16,8 @@ const App = () => {
       <Route path='/register' element={<Registration/>} />
       <Route path='/' element={<ProtectedRoute><HomePage/></ProtectedRoute>} />
       <Route path='/category-wise-gig/:catagory' element={<ProtectedRoute><Catagory/></ProtectedRoute>} />
-      <Route path='/profile' element={<Profile></Profile>} />
+      <Route path='/profile' element={<ProtectedRoute><Profile></Profile></ProtectedRoute>} />
+      <Route path='/loader' element={<Loader></Loader>} />
     </Routes>
 
   )
