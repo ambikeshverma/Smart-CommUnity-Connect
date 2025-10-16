@@ -54,7 +54,7 @@ const Nav = () => {
           </div>
 
           <button className="postRequestBtn">
-            <span  onClick={()=>setIsOpenPostForm(true)}>+</span>
+            <span className="pl-1" onClick={()=>setIsOpenPostForm(true)}>+</span>
             <span className="pl-2"  onClick={()=>setIsOpenPostForm(true)}>Post Request</span>
             <Form isOpenPostForm={isOpenPostForm} isClosePostForm={()=>setIsOpenPostForm(false)}></Form>
           </button>

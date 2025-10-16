@@ -68,9 +68,9 @@
   transition: background-color 0.2s, transform 0.2s;
 }
 .postBox img{
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 12px;
 }
 .postBox h5{
   padding-top: 4px;
@@ -106,7 +106,7 @@
   align-items: center;
   background-color: rgb(6, 191, 0);
   color: #fff;
-  padding: 10px 16px;
+  /* padding: 10px 16px; */
   border-radius: 8px;
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.477);
   border: none;
@@ -114,6 +114,16 @@
   font-size: 14px;
   font-weight: 500;
   transition: background-color 0.3s, transform 0.2s;
+}
+.postRequestBtn .pl-1{
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.postRequestBtn .pl-2{
+  margin-right: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .logout{
   background-color: rgb(255, 87, 3);

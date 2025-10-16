@@ -87,7 +87,9 @@
 .bars .bar2 {
   transform: rotate(-45deg);
 }
-
+.sideBarContent{
+  margin-bottom: 10px;
+}
 .sideBarCard{
   width: 100%;
   height: auto;
