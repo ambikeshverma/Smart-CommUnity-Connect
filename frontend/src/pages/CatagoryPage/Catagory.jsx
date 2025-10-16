@@ -40,15 +40,16 @@ useEffect(() => {
           <h4>Find your requirements</h4>
         </div>
         <div className="cards">
-          {loading && <Loader></Loader>}
-          {items.length > 0 ? (
-            items.map((item) => <Card key={item._id} {...item} />)
-          ) : (
+          {loading ? <Loader></Loader>:
+          items.length === 0 ? (
             <p
               style={{ textAlign: "center", marginTop: "20px", color: "gray" }}
             >
               No gigs found in this category
             </p>
+          ) :
+          (
+            items.map((item) => <Card key={item._id} {...item} />)
           )}
         </div>
       </div>
