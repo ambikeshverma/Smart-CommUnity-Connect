@@ -36,7 +36,7 @@ useEffect(() => {
     <>
       <div class="conatiner">
         <div class="title1">
-          <h1>Catagory Page</h1>
+          <h1>{items.length > 0 ? `All Gig posted by ${items[0].roleAtPosting}` : `— No Gig posted in this Catagory —`}</h1>
           <h4>Find your requirements</h4>
         </div>
         <div className="cards">

@@ -86,7 +86,7 @@ const SeekerDashboard = () => {
           catagory="Blood donation"
         />
         <Cards
-          img="\assets\Books.jpg"
+          img="\assets\books.jpg"
           title="Book & Education"
           description="Find educational resources and support."
           catagory="Book donation"

@@ -13,7 +13,7 @@ export default function UserTypeToggle() {
   return (
     <button
       onClick={toggleRole}
-      className={`relative w-27 h-9 rounded-full transition-colors duration-300
+      className={`relative w-27 h-9 rounded-full transition-colors duration-300 cursor-pointer
         ${isSeeker ? "bg-blue-200" : "bg-green-200"}`}
     >
       {/* Knob */}
@@ -25,7 +25,7 @@ export default function UserTypeToggle() {
 
       {/* Dynamic Label (always beside knob) */}
       <span
-        className={`absolute top-1 h-7 flex items-center text-sm font-semibold transition-all duration-500
+        className={`absolute top-1 h-7 flex items-center text-sm font-semibold transition-all duration-500 cursor-pointer
           ${isSeeker ? "left-10 text-blue-600" : "right-10 text-green-600"}`}
       >
         {isSeeker ? "Seeker" : "Provider"}
