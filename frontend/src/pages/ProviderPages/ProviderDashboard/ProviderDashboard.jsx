@@ -86,7 +86,7 @@ const ProviderDashboard = () => {
           catagory="Blood donation"
         />
         <Cards
-          img="\assets\Books.jpg"
+          img="\assets\books.jpg"
           title="Book & Education"
           description="Find educational resources and support."
           catagory="Book donation"
@@ -103,6 +103,25 @@ const ProviderDashboard = () => {
           description="Find local workers and services."
           catagory="Local Workers"
         />
+             <Cards
+                img="\assets\community.jpg"
+                title="Community Services"
+                description="Access various community services and support."
+                catagory="Community Services"
+              />
+              <Cards
+                img="\assets\book donation.jpg"
+                title="Book Donation"
+                description="Donate or receive books for education."
+                catagory="Book donation"
+              />
+              <Cards
+                img="\assets\transfer location.jpg"
+                title="mutual location transfer"
+                description=" Get help with moving and transportation."
+                catagory="Mutual Location Transfer"
+              /> 
+                
       </div>
 
       <div className="footer-content">
