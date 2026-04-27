@@ -33,7 +33,7 @@ const SeekerDashboard = () => {
           <option value="5">Local Workers</option>
         </select>
 
-        <button type="submit">Search</button>
+        <button>Search</button>
       </div>
 
       <div className="analytic">
